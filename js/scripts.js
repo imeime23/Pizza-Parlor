@@ -1,19 +1,32 @@
-// User Interface Logic
-document.addEventListener("DOMContentLoaded", function() {
-  let form = document.getElementById("pizza-form");
-  form.addEventListener("submit", function(event) {
-    event.preventDefault();
-    let toppings = [];
-    let toppingInputs = document.getElementsByName("toppings");
-    for (let i = 0; i < toppingInputs.length; i++) {
-      if (toppingInputs[i].checked) {
-        toppings.push(toppingInputs[i].value);
-      }
+
+// Define pizza object constructor
+class Pizza {
+  constructor(toppings, size) {
+    this.toppings = toppings;
+    this.size = size;
+  }
+
+  // Define prototype method for calculating cost of pizza
+  cost() {
+    let cost = 0;
+    if (this.size === "medium") {
+      cost += 10;
+    } else if (this.size === "large") {
+      cost += 12;
     }
-    let size = document.getElementById("size").value;
-    let pizza = new Pizza(toppings, size);
-    let cost = pizza.calculateCost();
-    let costElement = document.getElementById("cost");
-    costElement.textContent = "Your pizza will cost $" + cost.toFixed(2);
-  });
+    cost += this.toppings.length * 1;
+    return cost;
+  }
+}
+
+// Add event listener for form submission
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+  const toppings = [];
+  const toppingInputs = document.querySelectorAll('input[name="topping"]:checked');
+  toppingInputs.forEach((input) => toppings.push(input.value));
+  const size = document.querySelector('input[name="size"]:checked').value;
+  const pizza = new Pizza(toppings, size);
+  const totalCost = pizza.cost();
+  document.getElementById("total-cost").textContent = totalCost;
 });
