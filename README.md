@@ -81,3 +81,8 @@ Test: "It should return the cost of a small pizza with 3 toppings"
 Code: const mySmallPizza = new Pizza(['mushrooms', 'pepperoni', 'chicken'], 'small');
 mySmallPizza.calculateCost();
 Expected Output: 8
+
+Test: "It should return the cost of a large pizza without topping"
+Code: const mylargePizza = new Pizza(['cheese' ], 'large');
+mylargePizza.calculateCost();
+Expected Output: 10
