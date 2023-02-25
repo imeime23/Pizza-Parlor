@@ -60,50 +60,16 @@ Copyright (c) _January 29, 2023_ _Emiliano Slaibe_
 
 
 
+Describe: calculateCost() 
+
+Test: "It should return the cost of a small pizza without toppings"
+Code: const mySmallPizza = new Pizza('small');
+mySmallPizza.calculateCost();
+Expected Output: 5
 
 
 
-Test Driven Development
-Describe: Anonymous (within the EventListener Method)
-
-Test: For numbers that contain a 3, all digits should be replaced with "Won't you be my neighbor?" Code: Anonymous (5); Expected Output: [0, Beep!, Boop!, Won't you be my neighbor?, 4, 5]
-
-Test: For numbers that contain a 2, all digits should be replaced with "Boop!" Code: Anonymous (5); Expected Output: [0, Beep!, Boop!, Won't you be my neighbor?, 4, 5]
-
-Test: For numbers that contain a 1, all digits should be replaced with "Beep!" Code: Anonymous (5); Expected Output: [0, Beep!, Boop!, Won't you be my neighbor?, 4, 5]
-
-
-
-
-<!--numberOfOccurrencesInText()>
-
-<!--string example "red blue red red green red"-->
-
-<!--Our First Test-->
-
-Describe: numberOfOccurrencesInText()
-
-Test: "It should return 0 occurrences of a word for an empty string."
-Code:
-const text = "";
-const word = "red";
-numberOfOccurrencesInText(word, text);
-Expected Output: 0
-
-
-<!--Our Second Test-->
-Test: "It should return 1 occurrence of a word when the word and the text are the same."
-Code:
-const text = "red";
-const word = "red";
-numberOfOccurrencesInText(word, text);
-Expected Output: 1
-
-<!--MULTIMPLE WORDS- Our Third Test Are we ready to move onto multiple words? Well, we should verify that it doesn't return a match if the word and the text aren't the same first.-->
-
-Test: "It should return 0 occurrences of a word when the word and the text are different."
-Code:
-const text = "red";
-const word = "blue";
-numberOfOccurrencesInText(word, text);
-Expected Output: 0
+Test: "It should return the cost of a small pizza with 1 topping"
+Code: const mySmallPizza = new Pizza(['mushrooms'], 'small');
+mySmallPizza.calculateCost();
+Expected Output: 6
