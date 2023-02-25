@@ -21,20 +21,6 @@ Pizza.prototype.calculateCost = function () {
   return cost;
 };
 
-function ShoppingCart() {
-  this.pizzas = [];
-  this.totalPrice = 0;
-}
-
-ShoppingCart.prototype.calculateTotalCost = function () {
-  let total = 0;
-  this.pizzas.forEach(function (pizza) {
-    total += pizza.calculateCost();
-  });
-
-  return total;
-};
-
 // User Interface
 // Function for getting the selected toppings and size, creating a new pizza object, and displaying the cost
 function calculateCost() {

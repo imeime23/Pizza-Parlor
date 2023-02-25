@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Pizza Parlor</title>
-  </head>
-  <body>
-    <h1>Pizza Order Form</h1>
-    <form id="pizza-form">
-      <h2>Toppings</h2>
-      <label><input type="checkbox" name="toppings" value="cheese"> Cheese</label><br>
-      <label><input type="checkbox" name="toppings" value="pepperoni"> Pepperoni</label><br>
-      <label><input type="checkbox" name="toppings" value="chicken"> Chicken</label><br>
-      <h2>Size</h2>
-      <select id="size" name="size">
-        <option value="medium">Medium ($10)</option>
-        <option value="large">Large ($12)</option>
-      </select>
-      <br><br>
-      <button type="submit">Submit Order</button>
-    </form>
-    <div id="cost"></div>
-    <script src="js/scripts.js"></script>
-  </body>
+<head>
+	<title>Emiliano's Pizza</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<div class="container">
+		<div class="hero">
+			<h1>Emiliano's Pizza</h1>
+		</div>
+		
+		<form id="pizza-form" action="javascript:void(0)">
+			<label for="toppings">Choose your toppings (all pizzas already come with cheese):</label><br>
+			<input type="checkbox" id="mushrooms" name="topping" value="mushrooms">
+			<label for="mushrooms">Mushrooms</label><br>
+			<input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
+			<label for="pepperoni">Pepperoni</label><br>
+			<input type="checkbox" id="chicken" name="topping" value="chicken">
+			<label for="chicken">Chicken</label><br><br>
+
+			<label for="size">Choose the size:</label><br>
+			<input type="radio" id="large" name="size" value="large">
+			<label for="large">Large</label><br>
+			<input type="radio" id="small" name="size" value="small">
+			<label for="small">Small</label><br><br>
+
+			<input type="submit" value="Total Cost" >
+			<div id="pizza-form-error" class="error"></div>
+			<div id="cost"></div>
+		</form>
+	</div>
+	<script src="js/scripts.js"></script>
+</body>
 </html>
