@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.hero {
+  background-color: red;
+  color: white;
+  padding: 4px;
+}
+
+form {
+  padding: 16px;
+
+}
+
+.error {
+  color: red;
+  padding: 16px 0;
+}
