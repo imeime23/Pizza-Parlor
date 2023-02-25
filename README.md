@@ -67,15 +67,17 @@ Code: const mySmallPizza = new Pizza('small');
 mySmallPizza.calculateCost();
 Expected Output: 5
 
-
-
 Test: "It should return the cost of a small pizza with 1 topping"
-Code: const mySmallPizza = new Pizza(['mushrooms'], 'small');
+Code: const mySmallPizza = new Pizza(['mushrooms' ], 'small');
 mySmallPizza.calculateCost();
 Expected Output: 6
-
 
 Test: "It should return the cost of a small pizza with 2 toppings"
 Code: const mySmallPizza = new Pizza(['mushrooms', 'pepperoni'], 'small');
 mySmallPizza.calculateCost();
 Expected Output: 7
+
+Test: "It should return the cost of a small pizza with 3 toppings"
+Code: const mySmallPizza = new Pizza(['mushrooms', 'pepperoni', 'chicken'], 'small');
+mySmallPizza.calculateCost();
+Expected Output: 8
